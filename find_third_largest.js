@@ -103,37 +103,37 @@ testTree.insert('125');
 // console.log('The tree: ', testTree)
 
 function thirdLargest(node) {
- while (node.right !== null) {
-   node = node.right;
- }
+  while (node.right !== null) {
+    node = node.right;
+  }
 
- if (node.left !== null) {
-   return node.parent.key;
- }
+  if (node.left !== null) {
+    return node.parent.key;
+  }
 
- if (node.parent !== null) {
-   if (node.parent.left !== null) {
-     return node.parent.left.key;
-   } else if (node.parent.parent !== null) {
-     return node.parent.parent.key;
-   } else {
-     console.log("length less than 3 ");
-     return undefined;
-   }
- } else {
-   console.log("length less than 3");
-   return undefined;
- }
+  if (node.parent !== null) {
+    if (node.parent.left !== null) {
+      return node.parent.left.key;
+    } else if (node.parent.parent !== null) {
+      return node.parent.parent.key;
+    } else {
+      console.log('length less than 3 ');
+      return undefined;
+    }
+  } else {
+    console.log('length less than 3');
+    return undefined;
+  }
 }
 
 const thirdLargestIs = new BinarySearchTree();
 
-thirdLargestIs.insert(-10, "");
-thirdLargestIs.insert(0, "");
-thirdLargestIs.insert(20, "");
-thirdLargestIs.insert(25, "");
+thirdLargestIs.insert(-10, '');
+thirdLargestIs.insert(0, '');
+thirdLargestIs.insert(20, '');
+thirdLargestIs.insert(25, '');
 
-console.log("what is the 3rd largest? ", thirdLargest(thirdLargestIs));
+console.log('what is the 3rd largest? ', thirdLargest(thirdLargestIs));
 
 
 
