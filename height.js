@@ -99,9 +99,10 @@ height.insert("-1");
 height.insert("1");
 height.insert("5");
 height.insert("10");
-height.insert("10");
+height.insert("5");
+// height.insert("10");
 height.insert("100");
-height.insert("1000");
+// height.insert("1000");
 // height.insert("4000");
 // height.insert("1000000");
 // height.insert("10000000");
@@ -129,5 +130,6 @@ function heightFinder(node) {
     return right + 1;
   }
 }
+
 
 console.log("Height is: ", heightFinder(height));
